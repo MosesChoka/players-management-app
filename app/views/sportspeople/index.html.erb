@@ -1,0 +1,35 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+  <h1>Sportspeople</h1>
+
+    <table class="table table-striped table-responsive table-hover">
+      <thead>
+        <tr>
+          <th> First name </th>
+          <th> Last name </th>
+          <th> Birth date </th>
+          <th> Phone </th>
+          <th> Email Address </th>
+          <th> Team </th>
+          <th> Position </th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @sportspeople.each do |sportsperson| %>
+          <tr>
+            <td><%= sportsperson.firstname %></td>
+            <td><%= sportsperson.lastname %></td>
+            <td><%= sportsperson.birthdate %></td>
+            <td><%= sportsperson.phone %></td>
+            <td><%= sportsperson.email %></td>
+            <td><%= sportsperson.team %></td>
+            <td><%= sportsperson.position %><td>
+            <td><%= link_to "Show this sportsperson", sportsperson %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <%= link_to "New sportsperson", new_sportsperson_path, class:"btn btn-primary" %>
+</div>

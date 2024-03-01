@@ -1,0 +1,31 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container mt-4 p-5 bg-secondary text-white rounded">
+  
+  <%= image_tag(@sportsperson.image) %>
+  <h1>
+    <%= @sportsperson.firstname %>
+    <%= @sportsperson.lastname %>
+  </h1>
+  <br/>
+  <p class="lead">
+    <%= @sportsperson.birthdate %>
+  </p>
+
+  <p class="lead">
+    <%= @sportsperson.phone %> |
+    <%= @sportsperson.email %>
+  </p>
+
+  <p class="lead">
+    <%= @sportsperson.team %> |
+    <%= @sportsperson.position %>
+  </p>
+
+  <div>
+    <%= link_to "Edit this sportsperson", edit_sportsperson_path(@sportsperson), class:"btn btn-primary" %> |
+    <%= link_to "Back to sportspeople", sportspeople_path, class:"btn btn-primary" %>
+
+    <%= button_to "Destroy this sportsperson", @sportsperson, method: :delete %>
+  </div>
+</div>
