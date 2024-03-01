@@ -27,6 +27,7 @@
             <td><%= sportsperson.team %></td>
             <td><%= sportsperson.position %><td>
             <td><%= link_to "Show this sportsperson", sportsperson %></td>
+            <td><%= button_to "Destroy this sportsperson", @sportsperson, method: :delete, class:"btn btn-primary" %></td>
           </tr>
         <% end %>
       </tbody>
