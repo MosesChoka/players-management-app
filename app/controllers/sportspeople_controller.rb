@@ -6,6 +6,10 @@ class SportspeopleController < ApplicationController
     @sportspeople = Sportsperson.all
   end
 
+  def search
+    @sportspeople = Sportsperson.where("team LIKE ?", "%" + params[:q] + "%")
+  end
+
   def home
   end
 
