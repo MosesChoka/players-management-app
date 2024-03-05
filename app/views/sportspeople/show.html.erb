@@ -23,7 +23,9 @@
   </p>
 
   <div>
-    <%= link_to "Edit this sportsperson", edit_sportsperson_path(@sportsperson), class:"btn btn-primary" %> |
-    <%= link_to "Back to sportspeople", sportspeople_path, class:"btn btn-primary" %>
+    <%= link_to "Edit player info", edit_sportsperson_path(@sportsperson), class:"btn btn-primary" %> |
+    <%= link_to "Back to players", sportspeople_path, class:"btn btn-primary" %> <br/>
+    <br/>
+    <%= button_to "Delete player", @sportsperson, method: :delete, class:"btn btn-primary" %>
   </div>
 </div>

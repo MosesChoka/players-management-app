@@ -7,7 +7,7 @@ class SportspeopleController < ApplicationController
   end
 
   def search
-    @sportspeople = Sportsperson.where("team LIKE ?", "%" + params[:q] + "%")
+    @sportspeople = Sportsperson.where("firstname LIKE ?", "%" + params[:q] + "%")
   end
 
   def home

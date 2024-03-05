@@ -2,6 +2,13 @@
 
 <div class="container">
   <h1>Sportspeople</h1>
+  <form class="d-flex justify-content-end" action="/search" style="width: 400px; margin-left: 70%;">
+        <input class="form-control me-2" name="q" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+  <br/>
+  <br/>
+
 
     <table class="table table-striped table-responsive table-hover">
       <thead>
@@ -26,11 +33,10 @@
             <td><%= sportsperson.email %></td>
             <td><%= sportsperson.team %></td>
             <td><%= sportsperson.position %><td>
-            <td><%= link_to "Show this sportsperson", sportsperson %></td>
-            <td><%= button_to "Destroy this sportsperson", @sportsperson, turbo_method: :delete, class:"btn btn-primary" %></td>
+            <td><%= link_to "Show this player", sportsperson %></td>
           </tr>
         <% end %>
       </tbody>
     </table>
-  <%= link_to "New sportsperson", new_sportsperson_path, class:"btn btn-primary" %>
+  <%= link_to "Add a Player", new_sportsperson_path, class:"btn btn-primary" %>
 </div>
