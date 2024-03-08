@@ -1,5 +1,3 @@
-<p style="color: green"><%= notice %></p>
-
 <div class="container mt-4 p-5 bg-secondary text-white rounded">
   
   <%= image_tag(@sportsperson.image_as_thumbnail) %>
@@ -23,9 +21,11 @@
   </p>
 
   <div>
-    <%= link_to "Edit player info", edit_sportsperson_path(@sportsperson), class:"btn btn-primary" %> |
-    <%= link_to "Back to players", sportspeople_path, class:"btn btn-primary" %> <br/>
-    <br/>
-    <%= button_to "Delete player", @sportsperson, method: :delete, class:"btn btn-primary" %>
+    <% if admin_signed_in? %>
+      <%= link_to "Edit player info", edit_sportsperson_path(@sportsperson), class:"btn btn-primary" %> |
+      <%= button_to "Delete player", @sportsperson, method: :delete, class:"btn btn-primary" %>
+    <% else %>
+      <%= link_to "Back to players", sportspeople_path, class:"btn btn-primary" %>
+    <% end %>
   </div>
 </div>
