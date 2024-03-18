@@ -21,11 +21,8 @@
   </p>
 
   <div>
-    <% if admin_signed_in? %>
       <%= link_to "Edit player info", edit_sportsperson_path(@sportsperson), class:"btn btn-primary" %> |
       <%= button_to "Delete player", @sportsperson, method: :delete, class:"btn btn-primary" %>
-    <% else %>
       <%= link_to "Back to players", sportspeople_path, class:"btn btn-primary" %>
-    <% end %>
   </div>
 </div>

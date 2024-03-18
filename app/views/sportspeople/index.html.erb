@@ -38,7 +38,7 @@
         <% end %>
       </tbody>
     </table>
-    <% if admin_signed_in? %>
+    <% if user_signed_in? %>
       <%= link_to "Add a Player", new_sportsperson_path, class:"btn btn-primary" %>
     <% end %>
 

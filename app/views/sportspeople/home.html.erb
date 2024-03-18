@@ -18,15 +18,13 @@
             </div>
 
             <div class="lc-block d-grid gap-2 d-md-flex justify-content-md-start">
-                <%= button_to "Admin login", new_admin_session_path, class:"btn btn-primary px-4 me-md-2"%>
-                <% if admin_signed_in? %>
-                    <%= button_to "Admin logout", destroy_admin_session_path, class:"btn btn-primary px-4 me-md-2"%>
-                <% else %>
-                    <%= button_to "User Logout", destroy_user_session_path, class:"btn btn-outline-secondary px-4"%>
-                <% end %>
+              <% if user_signed_in? %>
+                <%= button_to "User logout", destroy_user_session_path,method: :delete, class:"btn btn-primary px-4 me-md-2"%>
+              <% else %>
+                <%= button_to "User login", new_user_session_path, class:"btn btn-primary px-4 me-md-2"%>
+              <% end %>
             </div>
 
         </div>
     </div>
 </div>
-
